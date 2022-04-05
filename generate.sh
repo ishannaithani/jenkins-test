@@ -8,3 +8,8 @@ echo "Creating file schema.js"
 echo "console.log('test file generated')" > schema.js
 
 echo "----xxxxx---- Completed file generation ----xxxxx----"
+
+git checkout -b "auto/test"
+git add .
+git commit -m "commit from jenkins"
+git push origin master
