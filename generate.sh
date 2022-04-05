@@ -9,6 +9,11 @@ echo "console.log('test file generated')" > schema.js
 
 echo "----xxxxx---- Completed file generation ----xxxxx----"
 
+BRANCH_CODE=$(openssl rand -hex 5)
+BRANCH_NAME="auto/test-${BRANCH_CODE}"
+
+echo $BRANCH_NAME
+
 git checkout -b "auto/test"
 git add .
 git commit -m "commit from jenkins"
