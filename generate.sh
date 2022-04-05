@@ -12,7 +12,7 @@ echo "----xxxxx---- Completed file generation ----xxxxx----"
 BRANCH_CODE=$(openssl rand -hex 5)
 BRANCH_NAME="auto/test-${BRANCH_CODE}"
 GITHUB_USER="ishannaithani"
-GITHUB_TOKEN="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"
+GITHUB_TOKEN="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"
 destinationBranch="master"
 
 echo $BRANCH_NAME
