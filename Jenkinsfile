@@ -6,6 +6,7 @@ pipeline {
             steps {
                 echo 'Building..'
                 checkout scm
+                sh './generate.sh'
             }
         }
         stage('Test') {
