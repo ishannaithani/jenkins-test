@@ -16,5 +16,8 @@ echo $BRANCH_NAME
 
 git checkout -b "$BRANCH_NAME"
 git add .
+git status
 git commit -m "commit from jenkins"
+echo "files committed"
+git status
 git push origin master
