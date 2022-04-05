@@ -5,8 +5,14 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                checkout scm
-                sh './generate.sh'
+                 withCredentials([
+                  usernamePassword(credentialsId: 'github',
+                  usernameVariable: 'ishannaithani',
+                  passwordVariable: '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')
+                ]) {
+                  checkout scm
+                  sh './generate.sh'
+                }                
             }
         }
         stage('Test') {
