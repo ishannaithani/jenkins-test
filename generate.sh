@@ -27,12 +27,12 @@ echo "files committed"
 git status
 git push origin $BRANCH_NAME
 
-curl --max-time 120 -X POST \
-                       -u "ishannaithani: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" \
-                      "https://api.github.com/repos/ishannaithani/jenkins-test/pulls" \
-                      -d '{
-                            "title": "Automated pull request generated for ${deployEnv} against Parent PR ${CHANGE_ID}",
-                            "body": "Automated pull request generated for ${deployEnv} against Parent PR ${CHANGE_ID}",
-                            "head": "'"${BRANCH_NAME}"'",
-                            "base": "'"${destinationBranch}"'"
-                        }'
+# curl --max-time 120 -X POST \
+#                        -u "ishannaithani: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" \
+#                       "https://api.github.com/repos/ishannaithani/jenkins-test/pulls" \
+#                       -d '{
+#                             "title": "Automated pull request generated for ${deployEnv} against Parent PR ${CHANGE_ID}",
+#                             "body": "Automated pull request generated for ${deployEnv} against Parent PR ${CHANGE_ID}",
+#                             "head": "'"${BRANCH_NAME}"'",
+#                             "base": "'"${destinationBranch}"'"
+#                         }'
