@@ -28,8 +28,7 @@ git status
 git push origin $BRANCH_NAME
 
 curl --max-time 120 -X POST \
-                       -H "authorization: token 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" \
-                       -H "Accept: application/vnd.github.v3+json" \
+                       -u "ishannaithani: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" \
                       "https://api.github.com/repos/ishannaithani/jenkins-test/pulls" \
                       -d '{
                             "title": "Automated pull request generated for ${deployEnv} against Parent PR ${CHANGE_ID}",
