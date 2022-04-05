@@ -29,7 +29,8 @@ git push origin $BRANCH_NAME
 
 curl --max-time 120 -X POST \
                       -u ${GITHUB_USER}:${GITHUB_TOKEN} \
-                      "https://github.com/ishannaithani/jenkins-test/pulls" \
+                      "https://github.com/repos/ishannaithani/jenkins-test/pulls" \
+                      -H "Accept: application/vnd.github.v3+json" \
                       -d '{
                             "title": "Automated pull request generated for ${deployEnv} against Parent PR ${CHANGE_ID}",
                             "body": "Automated pull request generated for ${deployEnv} against Parent PR ${CHANGE_ID}",
