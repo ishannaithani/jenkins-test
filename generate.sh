@@ -20,4 +20,4 @@ git status
 git commit -m "commit from jenkins"
 echo "files committed"
 git status
-git push origin master
+git push origin $BRANCH_NAME
