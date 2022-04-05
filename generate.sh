@@ -12,7 +12,7 @@ echo "----xxxxx---- Completed file generation ----xxxxx----"
 BRANCH_CODE=$(openssl rand -hex 5)
 BRANCH_NAME="auto/test-${BRANCH_CODE}"
 GITHUB_USER="ishannaithani"
-GITHUB_TOKEN="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"
+GITHUB_TOKEN="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"
 destinationBranch="master"
 
 echo $BRANCH_NAME
@@ -28,6 +28,7 @@ git status
 git push origin $BRANCH_NAME
 
 curl --max-time 120 -X POST \
+                      -u "${GITHUB_USER}:${GITHUB_TOKEN}"
                        -H "Accept: application/vnd.github.v3+json" \
                       "https://api.github.com/repos/ishannaithani/jenkins-test/pulls" \
                       -d '{
