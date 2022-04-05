@@ -28,7 +28,7 @@ git status
 git push origin $BRANCH_NAME
 
 curl --max-time 120 -X POST \
-                       -u "ishannaithani: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" \
+                       -u "ishannaithani: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" \
                       "https://api.github.com/repos/ishannaithani/jenkins-test/pulls" \
                       -d '{
                             "title": "Automated pull request generated for ${deployEnv} against Parent PR ${CHANGE_ID}",
