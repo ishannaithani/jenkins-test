@@ -14,6 +14,8 @@ BRANCH_NAME="auto/test-${BRANCH_CODE}"
 
 echo $BRANCH_NAME
 
+git config credential.username "ishannaithani"  
+
 git checkout -b "$BRANCH_NAME"
 git add .
 git status
