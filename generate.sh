@@ -28,6 +28,7 @@ git status
 git push origin $BRANCH_NAME
 
 curl --max-time 120 -X POST \
+                      -u ${GITHUB_USER} \
                        -H "Accept: application/vnd.github.v3+json" \
                       "https://api.github.com/repos/ishannaithani/jenkins-test/pulls" \
                       -d '{
